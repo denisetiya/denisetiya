@@ -28,14 +28,13 @@ I'm currently focused on deepening my expertise in:
 
 - Advanced **TypeScript** patterns and design principles
 - Optimizing **Node.js** performance for large-scale applications
-- Exploring **GraphQL** for flexible data querying
 - Building modern, accessible **React** applications
 
 ## 🤝 Let's Connect!
 
 I'm always eager to connect with fellow developers, collaborate on exciting projects, and share knowledge. Feel free to reach out!
 
-- 💼 [LinkedIn]((https://linkedin.com/in/deni-setiya-920a092a5))
+- 💼 [LinkedIn](https://linkedin.com/in/deni-setiya-920a092a5)
 - 📧 [Email Me](mailto:denisetiya@gmail.com)
 
 ---
