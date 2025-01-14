@@ -20,6 +20,7 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 ## 🌟 Featured Projects
 
 1. [**REST API Template**](https://github.com/denisetiya/Rest-api-Template.git): A starter template for building REST APIs with different Framework
+2. [**MEBEL STORE (E-COMMERCE)**](https://github.com/denisetiya/mabel-store.git): FullStack E-commerce Web application Project, using React and Express
 
 
 ## 📚 What I'm Learning
