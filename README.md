@@ -21,7 +21,7 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 
 1. [**REST API Template**](https://github.com/denisetiya/Rest-api-Template.git): A starter template for building REST APIs with different Framework
 2. [**MEBEL STORE (E-COMMERCE)**](https://github.com/denisetiya/mabel-store.git): FullStack E-commerce Web application Project, using React and Express
-3. [**Single Store - E-Commerce API**](https://github.com/denisetiya/single-store-api.git) : BackEnd E-Commerce Project , using mongo, prisma, zod and etc
+3. [**Single Store - E-Commerce API**](https://github.com/denisetiya/single-store-api.git) : BackEnd E-Commerce Project , using express, ts, mongo, prisma, zod and etc
 
 
 ## 📚 What I'm Learning
