@@ -19,7 +19,7 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 
 ## 🌟 Featured Projects
 
-1. [**REST API Template**](https://github.com/denisetiya/Rest-api-Template.git): A versatile starter template for building REST APIs using various frameworks.  
+1. [**REST API Template**](https://github.com/denisetiya/Rest-api-Template.git): A versatile starter template for building REST APIs using various frameworks include Authentication.  
 2. [**MEBEL STORE (E-COMMERCE)**](https://github.com/denisetiya/mabel-store.git): A comprehensive Full-Stack E-commerce web application built with React and Express.  
 3. [**Single Store - E-Commerce API**](https://github.com/denisetiya/single-store-api.git): A robust backend for an E-commerce platform, developed with Express, TypeScript, MongoDB, Prisma, Zod, and more.  
 4. [**Medisense API - Intelligent Healthcare Solutions**](https://github.com/denisetiya/medisense-api.git) : A modern backend project offering features like **Symptom Analysis**, **Medication Recommendation**, **Disease Lookup**, and **Drug Interaction Checker** to transform healthcare services. 🚀
