@@ -23,7 +23,7 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 2. [**MEBEL STORE (E-COMMERCE)**](https://github.com/denisetiya/mabel-store.git): A comprehensive Full-Stack E-commerce web application built with React and Express.  
 3. [**Single Store - E-Commerce API**](https://github.com/denisetiya/single-store-api.git): A robust backend for an E-commerce platform, developed with Express, TypeScript, MongoDB, Prisma, Zod, and more.  
 4. [**Medisense API - Intelligent Healthcare Solutions**](https://github.com/denisetiya/medisense-api.git) : A modern backend project offering features like **Symptom Analysis**, **Medication Recommendation**, **Disease Lookup**, and **Drug Interaction Checker** to transform healthcare services. 🚀
-5. [RestQuick (cli module)](https://github.com/denisetiya/restquick.git) : Cli for generete Rest Api (base on Rest Api Template with Jwt authentication) 
+5. [RestQuick (cli module)](https://github.com/denisetiya/restquick.git) : Cli for generete Rest Api (base on Rest Api Template with Jwt authentication) using npx or pnpx
 
 ## 📚 What I'm Learning
 
