@@ -13,7 +13,7 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 ## 🔧 Technologies & Tools I Work With
 
 - **Languages**: TypeScript, JavaScript,Python, C++ HTML, CSS
-- **Frameworks**: React, Express, NestJS, Hono, Django
+- **Frameworks**: React, Svelte Express, NestJS, Hono, Django
 - **Databases**: PostgreSQL, MongoDB, MySql, Firebase
 - **Tools & Platforms**: Node.js, Bun, Docker, Git, VS Code, Postman, ApiDog
 
@@ -29,8 +29,8 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 I'm currently focused on deepening my expertise in:
 
 - Advanced **TypeScript** patterns and design principles
-- Optimizing **Node.js** performance for large-scale applications
-- Building modern, accessible **React** applications
+- Optimizing **Node.js or Bun.js** performance for large-scale applications
+- Building modern, accessible **React** and **Svelte** applications
 
 ## 🤝 Let's Connect!
 
