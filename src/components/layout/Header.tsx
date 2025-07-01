@@ -52,7 +52,7 @@ const Header = () => {
 
           {/* Theme Toggle, Language Selector & Mobile Menu */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="hidden sm:block">
+            <div className="">
               <LanguageSelector />
             </div>
             
@@ -94,9 +94,9 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <div className="pt-3 px-2 border-t border-gray-200 dark:border-gray-700 mt-3">
+            {/* <div className="pt-3 px-2 border-t border-gray-200 dark:border-gray-700 mt-3">
               <LanguageSelector />
-            </div>
+            </div> */}
           </motion.nav>
         )}
       </div>
