@@ -51,8 +51,10 @@ const Header = () => {
           </nav>
 
           {/* Theme Toggle, Language Selector & Mobile Menu */}
-          <div className="flex items-center space-x-3">
-            <LanguageSelector />
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="hidden sm:block">
+              <LanguageSelector />
+            </div>
             
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -61,7 +63,7 @@ const Header = () => {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
               title={theme === 'dark' ? t('theme.light') : t('theme.dark')}
             >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              {theme === 'dark' ? <Sun size={18} className="sm:w-5 sm:h-5" /> : <Moon size={18} className="sm:w-5 sm:h-5" />}
             </motion.button>
 
             {/* Mobile Menu Button */}
@@ -69,7 +71,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
@@ -87,11 +89,14 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="block py-3 px-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 {item.name}
               </a>
             ))}
+            <div className="pt-3 px-2 border-t border-gray-200 dark:border-gray-700 mt-3">
+              <LanguageSelector />
+            </div>
           </motion.nav>
         )}
       </div>

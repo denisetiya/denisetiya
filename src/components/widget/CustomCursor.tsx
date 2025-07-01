@@ -4,8 +4,17 @@ import { useEffect, useState } from 'react';
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile/touch device
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -25,12 +34,16 @@ const CustomCursor = () => {
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
+      window.removeEventListener('resize', checkIsMobile);
       interactiveElements.forEach(el => {
         el.removeEventListener('mouseenter', handleMouseEnter);
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
   }, []);
+
+  // Don't render cursor on mobile devices
+  if (isMobile) return null;
 
   return (
     <>

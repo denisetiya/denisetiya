@@ -96,11 +96,11 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-8"
+          className="space-y-6 md:space-y-8"
         >
           <motion.div variants={itemVariants}>
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
               style={{
                 transform: `translateY(${scrollY * 0.2}px)`
               }}
@@ -114,7 +114,7 @@ const Hero = () => {
 
           <motion.div variants={itemVariants}>
             <motion.p 
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+              className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-2"
               style={{
                 transform: `translateY(${scrollY * 0.25}px)`
               }}
@@ -125,7 +125,7 @@ const Hero = () => {
 
           <motion.div variants={itemVariants}>
             <motion.p 
-              className="text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto"
+              className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto px-2"
               style={{
                 transform: `translateY(${scrollY * 0.3}px)`
               }}
@@ -134,7 +134,7 @@ const Hero = () => {
             </motion.p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="flex justify-center space-x-6">
+          <motion.div variants={itemVariants} className="flex justify-center space-x-4 sm:space-x-6">
             {[
               { Icon: Github, href: 'https://github.com/denisetiya', label: 'GitHub' },
               { Icon: Linkedin, href: 'https://linkedin.com/in/deni-setiya-920a092a5', label: 'LinkedIn' },
@@ -145,18 +145,18 @@ const Hero = () => {
                 href={href}
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                className="p-2 sm:p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
-                <Icon size={24} />
+                <Icon size={20} className="sm:w-6 sm:h-6" />
               </motion.a>
             ))}
           </motion.div>
 
-          <motion.div variants={itemVariants} className="pt-8">
+          <motion.div variants={itemVariants} className="pt-6 md:pt-8">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-shadow duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-shadow duration-300 text-sm sm:text-base"
             >
               {t('hero.cta')}
             </motion.button>
@@ -169,15 +169,15 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center text-gray-400 dark:text-gray-500"
         >
-          <span className="text-sm mb-2">Scroll Down</span>
-          <ArrowDown size={20} />
+          <span className="text-xs sm:text-sm mb-2">Scroll Down</span>
+          <ArrowDown size={16} className="sm:w-5 sm:h-5" />
         </motion.div>
       </motion.div>
     </section>

@@ -59,22 +59,22 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section id="skills" className="py-16 sm:py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
       {/* Background parallax elements - Enhanced */}
       <div 
-        className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-blue-200/30 to-purple-200/30 dark:from-blue-600/10 dark:to-purple-600/10 rounded-full blur-3xl"
+        className="absolute top-5 sm:top-10 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-blue-200/30 to-purple-200/30 dark:from-blue-600/10 dark:to-purple-600/10 rounded-full blur-3xl"
         style={{
           transform: `translateY(${scrollY * 0.4}px) rotate(${scrollY * 0.2}deg) scale(${1 + scrollY * 0.0005})`
         }}
       />
       <div 
-        className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-r from-purple-200/30 to-pink-200/30 dark:from-purple-600/10 dark:to-pink-600/10 rounded-full blur-3xl"
+        className="absolute bottom-5 sm:bottom-10 right-5 sm:right-10 w-56 h-56 sm:w-80 sm:h-80 bg-gradient-to-r from-purple-200/30 to-pink-200/30 dark:from-purple-600/10 dark:to-pink-600/10 rounded-full blur-3xl"
         style={{
           transform: `translateY(${scrollY * -0.3}px) rotate(${scrollY * -0.15}deg) scale(${1 + scrollY * 0.0003})`
         }}
       />
       <div 
-        className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-cyan-200/20 to-blue-200/20 dark:from-cyan-600/5 dark:to-blue-600/5 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-cyan-200/20 to-blue-200/20 dark:from-cyan-600/5 dark:to-blue-600/5 rounded-full blur-3xl"
         style={{
           transform: `translate(-50%, -50%) translateY(${scrollY * 0.1}px) rotate(${scrollY * 0.05}deg)`
         }}
@@ -86,17 +86,17 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             {t('skills.title')}
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             {t('skills.subtitle')}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -104,13 +104,13 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg"
+              className="bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8 text-center">
                 {category.title}
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -119,10 +119,10 @@ const Skills = () => {
                     transition={{ duration: 0.5, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.05, x: 5 }}
-                    className="bg-white dark:bg-gray-700 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                    className="bg-white dark:bg-gray-700 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                      <span className="font-medium text-sm sm:text-base text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                         {skill.name}
                       </span>
                       <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -140,13 +140,13 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20"
+          className="mt-16 sm:mt-20"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-10">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white text-center mb-8 sm:mb-10 px-4">
             {t('skills.tech_title')}
           </h3>
           
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
             {[
               'TypeScript', 'JavaScript', 'Python', 'React', 'Svelte', 'Express', 'NestJS', 'Hono',
               'Node.js', 'Bun', 'PostgreSQL', 'MongoDB', 'Docker', 'Git', 'VS Code', 'Firebase'
@@ -158,9 +158,9 @@ const Skills = () => {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center"
+                className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center"
               >
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
                   {tech}
                 </span>
               </motion.div>

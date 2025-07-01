@@ -170,29 +170,31 @@ const Experience = () => {
               className="relative mb-12 last:mb-0"
             >
               {/* Timeline line */}
-              <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400"></div>
+              <div className="absolute left-4 sm:left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400"></div>
               
               {/* Timeline dot */}
-              <div className={`absolute left-6 top-8 w-4 h-4 rounded-full border-4 border-white dark:border-gray-800 shadow-lg ${
+              <div className={`absolute left-2.5 sm:left-6 top-8 w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-white dark:border-gray-800 shadow-lg ${
                 exp.current 
                   ? 'bg-green-500 dark:bg-green-400 animate-pulse' 
                   : 'bg-blue-500 dark:bg-blue-400'
               }`}></div>
               
               {/* Experience card */}
-              <div className="ml-20 bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group">
-                <div className="flex flex-wrap items-start justify-between mb-4">
+              <div className="ml-12 sm:ml-20 bg-white dark:bg-gray-900 rounded-2xl p-4 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group">
+                <div className="flex flex-wrap items-start justify-between mb-3 sm:mb-4">
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {t(exp.positionKey)}
                     </h3>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Building2 size={18} className="text-blue-500 dark:text-blue-400" />
-                      <span className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                        {t(exp.companyKey)}
-                      </span>
+                    <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-2 mb-2">
+                      <div className="flex items-center space-x-2">
+                        <Building2 size={16} className="text-blue-500 dark:text-blue-400 flex-shrink-0" />
+                        <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 dark:text-gray-300">
+                          {t(exp.companyKey)}
+                        </span>
+                      </div>
                       {exp.current && (
-                        <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-sm font-medium animate-pulse">
+                        <span className="px-2 sm:px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs sm:text-sm font-medium animate-pulse w-fit">
                           {t('experience.current')}
                         </span>
                       )}
@@ -200,18 +202,18 @@ const Experience = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                   <div className="flex items-center space-x-2">
-                    <Calendar size={16} />
+                    <Calendar size={14} className="flex-shrink-0" />
                     <span>{getPeriodText(exp)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <MapPin size={16} />
+                    <MapPin size={14} className="flex-shrink-0" />
                     <span>{t(exp.locationKey)}</span>
                   </div>
                 </div>
 
-                <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-3 mb-6">
+                <div className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   {t(exp.descriptionKey).split('\n').map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                   ))}
@@ -219,15 +221,15 @@ const Experience = () => {
 
                 {/* Skills used */}
                 {exp.skills && (
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">
+                  <div className="mb-4 sm:mb-6">
+                    <h4 className="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2 sm:mb-3">
                       {t('experience.skills_used')}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {exp.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-default"
+                          className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs sm:text-sm font-medium hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-default"
                         >
                           {skill}
                         </span>
@@ -300,12 +302,12 @@ const Experience = () => {
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
             {t('experience.cta_text')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-shadow duration-300"
+              className="inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-shadow duration-300 text-sm sm:text-base"
             >
               <span>{t('experience.cta_button')}</span>
             </motion.a>
@@ -315,10 +317,10 @@ const Experience = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300"
+              className="inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300 text-sm sm:text-base"
             >
               <span>{t('experience.linkedin_button')}</span>
-              <ExternalLink size={18} />
+              <ExternalLink size={16} className="sm:w-4.5 sm:h-4.5" />
             </motion.a>
           </div>
         </motion.div>
