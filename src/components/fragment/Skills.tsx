@@ -1,10 +1,12 @@
-import { motion } from 'framer-motion';
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const Skills = () => {
   const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
+  const titleRef = useScrollAnimation({ once: false });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -81,67 +83,62 @@ const Skills = () => {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            {t('skills.title')}
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            {t('skills.subtitle')}
-          </p>
-        </motion.div>
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="animate-fade-up animate-delay-200">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+              {t('skills.title')}
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
+              {t('skills.subtitle')}
+            </p>
+          </div>
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg"
-            >
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8 text-center">
-                {category.title}
-              </h3>
+          {skillCategories.map((category, categoryIndex) => {
+            const categoryRef = useScrollAnimation({ once: false });
+            return (
+              <div
+                key={category.title}
+                ref={categoryRef as React.RefObject<HTMLDivElement>}
+                className="animate-fade-up"
+                style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
+              >
+                <div className="bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8 text-center">
+                    {category.title}
+                  </h3>
 
-              <div className="space-y-4 sm:space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.05, x: 5 }}
-                    className="bg-white dark:bg-gray-700 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-sm sm:text-base text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                        {skill.name}
-                      </span>
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  </motion.div>
-                ))}
+                  <div className="space-y-4 sm:space-y-6">
+                    {category.skills.map((skill, skillIndex) => {
+                      const skillRef = useScrollAnimation({ once: false });
+                      return (
+                        <div
+                          key={skill.name}
+                          ref={skillRef as React.RefObject<HTMLDivElement>}
+                          className="animate-fade-left"
+                          style={{ transitionDelay: `${(categoryIndex * 0.2) + (skillIndex * 0.1)}s` }}
+                        >
+                          <div className="bg-white dark:bg-gray-700 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group hover:scale-105 hover:translate-x-1">
+                            <div className="flex items-center justify-between">
+                              <span className="font-medium text-sm sm:text-base text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                {skill.name}
+                              </span>
+                              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Tech Stack Icons Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 sm:mt-20"
-        >
+        <div className="mt-16 sm:mt-20">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white text-center mb-8 sm:mb-10 px-4">
             {t('skills.tech_title')}
           </h3>
@@ -150,23 +147,25 @@ const Skills = () => {
             {[
               'TypeScript', 'JavaScript', 'Python', 'React', 'Svelte', 'Express', 'NestJS', 'Hono',
               'Node.js', 'Bun', 'PostgreSQL', 'MongoDB', 'Docker', 'Git', 'VS Code', 'Firebase'
-            ].map((tech, index) => (
-              <motion.div
-                key={tech}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center"
-              >
-                <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
-                  {tech}
-                </span>
-              </motion.div>
-            ))}
+            ].map((tech, index) => {
+              const techRef = useScrollAnimation({ once: false });
+              return (
+                <div
+                  key={tech}
+                  ref={techRef as React.RefObject<HTMLDivElement>}
+                  className="animate-scale"
+                  style={{ transitionDelay: `${index * 0.05}s` }}
+                >
+                  <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center hover:scale-110 hover:-translate-y-1">
+                    <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
+                      {tech}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

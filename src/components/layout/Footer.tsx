@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 
@@ -28,12 +27,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Logo and Description */}
           <div className="text-center md:text-left">
-            <motion.h3 
-              whileHover={{ scale: 1.05 }}
-              className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2"
-            >
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 hover:scale-105 transition-transform duration-200">
               Deni<span className="text-blue-600 dark:text-blue-400">Setiya</span>
-            </motion.h3>
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
               Creating digital experiences that matter
             </p>
@@ -42,16 +38,14 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex space-x-4 sm:space-x-6">
             {socialLinks.map((link) => (
-              <motion.a
+              <a
                 key={link.label}
                 href={link.href}
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="p-2.5 sm:p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                className="p-2.5 sm:p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 hover:-translate-y-0.5"
                 aria-label={link.label}
               >
                 <link.icon size={18} className="sm:w-5 sm:h-5" />
-              </motion.a>
+              </a>
             ))}
           </div>
         </div>
@@ -64,12 +58,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
               <span>{t('footer.made_with')}</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
+              <div className="animate-pulse">
                 <Heart size={14} className="sm:w-4 sm:h-4 text-red-500" />
-              </motion.div>
+              </div>
               <span>React {t('footer.by')} Denisetiya</span>
             </div>
           </div>

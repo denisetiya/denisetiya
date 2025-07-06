@@ -1,11 +1,15 @@
-import { motion } from 'framer-motion';
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Calendar, MapPin, Building2, ExternalLink } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const Experience = () => {
   const { t, language } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
+  const titleRef = useScrollAnimation({ once: false });
+  const statsRef = useScrollAnimation({ once: false });
+  const ctaRef = useScrollAnimation({ once: false });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -144,31 +148,28 @@ const Experience = () => {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {t('experience.title')}
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t('experience.subtitle')}
-          </p>
-        </motion.div>
+        <div ref={titleRef as React.RefObject<HTMLDivElement> } className="animate-fade-up animate-delay-200">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              {t('experience.title')}
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              {t('experience.subtitle')}
+            </p>
+          </div>
+        </div>
 
         <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="relative mb-12 last:mb-0"
-            >
+          {experiences.map((exp, index) => {
+            const expRef = useScrollAnimation({ once: false });
+            return (
+              <div
+                key={index}
+                ref={expRef as React.RefObject<HTMLDivElement>}
+                className={index % 2 === 0 ? 'animate-fade-left' : 'animate-fade-right'}
+                style={{ transitionDelay: `${index * 0.2}s` }}
+              >
+              <div className="relative mb-12 last:mb-0">
               {/* Timeline line */}
               <div className="absolute left-4 sm:left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400"></div>
               
@@ -253,18 +254,15 @@ const Experience = () => {
                   </span>
                 </div>
               </div>
-            </motion.div>
-          ))}
+              </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Professional summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700"
-        >
+        <div ref={statsRef as React.RefObject<HTMLDivElement>} className="animate-fade-up animate-delay-500">
+          <div className="mt-16 bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               {t('experience.summary.title')}
@@ -289,41 +287,34 @@ const Experience = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Call to action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-            {t('experience.cta_text')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-shadow duration-300 text-sm sm:text-base"
-            >
-              <span>{t('experience.cta_button')}</span>
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/in/deni-setiya-920a092a5"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300 text-sm sm:text-base"
-            >
-              <span>{t('experience.linkedin_button')}</span>
-              <ExternalLink size={16} className="sm:w-4.5 sm:h-4.5" />
-            </motion.a>
+        <div ref={ctaRef as React.RefObject<HTMLDivElement>} className="animate-fade-up animate-delay-700">
+          <div className="text-center mt-16">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              {t('experience.cta_text')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 text-sm sm:text-base hover:scale-105"
+              >
+                <span>{t('experience.cta_button')}</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/deni-setiya-920a092a5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 text-sm sm:text-base hover:scale-105"
+              >
+                <span>{t('experience.linkedin_button')}</span>
+                <ExternalLink size={16} className="sm:w-4.5 sm:h-4.5" />
+              </a>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

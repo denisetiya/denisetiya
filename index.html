@@ -2,11 +2,183 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/vite.svg" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Denisetiya</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Denisetiya - Full Stack Developer | React, Node.js, TypeScript Expert</title>
+    <meta name="description" content="Denisetiya is a passionate Full Stack Developer specializing in React, Node.js, TypeScript, and modern web technologies. Over 2+ years of experience building scalable solutions and elegant digital experiences." />
+    <meta name="keywords" content="Full Stack Developer, React Developer, Node.js Developer, TypeScript, JavaScript, Web Developer, Frontend Developer, Backend Developer, Indonesia Developer, Denisetiya" />
+    <meta name="author" content="Denisetiya" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <link rel="canonical" href="https://denisetiya.vercel.app/" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Denisetiya - Full Stack Developer | React, Node.js, TypeScript Expert" />
+    <meta property="og:description" content="Passionate Full Stack Developer with 2+ years of experience building scalable solutions using React, Node.js, TypeScript, and modern web technologies." />
+    <meta property="og:url" content="https://denisetiya.vercel.app/" />
+    <meta property="og:site_name" content="Denisetiya Portfolio" />
+    <meta property="og:image" content="https://denisetiya.vercel.app/assets/profile-BEGecFDs.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Denisetiya - Full Stack Developer Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="id_ID" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Denisetiya - Full Stack Developer | React, Node.js, TypeScript Expert" />
+    <meta name="twitter:description" content="Passionate Full Stack Developer with 2+ years of experience building scalable solutions using React, Node.js, TypeScript, and modern web technologies." />
+    <meta name="twitter:image" content="https://denisetiya.vercel.app/assets/profile-BEGecFDs.jpeg" />
+    <meta name="twitter:image:alt" content="Denisetiya - Full Stack Developer Portfolio" />
+    <meta name="twitter:creator" content="@denisetiya" />
+    <meta name="twitter:site" content="@denisetiya" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="msapplication-TileImage" content="/vite.svg" />
+    <meta name="google-site-verification" content="" />
+    <meta name="language" content="English, Indonesian, Japanese" />
+    <meta name="geo.region" content="ID" />
+    <meta name="geo.country" content="Indonesia" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <meta name="color-scheme" content="light dark" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Denisetiya Portfolio" />
+    
+    <!-- Additional Social Meta Tags -->
+    <meta property="article:author" content="Denisetiya" />
+    <meta property="profile:first_name" content="Deni" />
+    <meta property="profile:last_name" content="Setiya" />
+    <meta property="profile:username" content="denisetiya" />
+    
+    <!-- LinkedIn Meta Tags -->
+    <meta property="og:type" content="profile" />
+    <meta name="linkedin:owner" content="deni-setiya-920a092a5" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://api.github.com" />
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Denisetiya",
+      "alternateName": "Deni Setiya",
+      "jobTitle": "Full Stack Developer",
+      "description": "Passionate Full Stack Developer specializing in React, Node.js, TypeScript, and modern web technologies with over 2+ years of experience building scalable solutions",
+      "url": "https://denisetiya.vercel.app/",
+      "image": "https://denisetiya.vercel.app/assets/profile-BEGecFDs.jpeg",
+      "email": "denisetiya@gmail.com",
+      "sameAs": [
+        "https://github.com/denisetiya",
+        "https://linkedin.com/in/deni-setiya-920a092a5",
+        "https://www.npmjs.com/~denisetiya"
+      ],
+      "knowsAbout": [
+        "Full Stack Development",
+        "React.js",
+        "Node.js",
+        "TypeScript",
+        "JavaScript",
+        "MongoDB",
+        "PostgreSQL",
+        "Express.js",
+        "NestJS",
+        "Hono",
+        "Svelte",
+        "Docker",
+        "Git",
+        "Python",
+        "Django",
+        "REST APIs",
+        "Database Design",
+        "Web Development",
+        "Frontend Development",
+        "Backend Development"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PT HES Cipta Kreasi",
+        "url": "https://hes.co.id"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "UIN Sunan Gunung Djati Bandung"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Indonesia",
+        "addressRegion": "West Java"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Full Stack Developer",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Indonesia"
+        },
+        "skills": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "JavaScript",
+          "MongoDB",
+          "PostgreSQL",
+          "Express.js",
+          "NestJS",
+          "Python",
+          "Django"
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Denisetiya Portfolio",
+      "description": "Portfolio website of Denisetiya, a Full Stack Developer specializing in modern web technologies",
+      "url": "https://denisetiya.vercel.app/",
+      "author": {
+        "@type": "Person",
+        "name": "Denisetiya"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://denisetiya.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

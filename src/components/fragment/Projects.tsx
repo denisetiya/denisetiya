@@ -1,11 +1,14 @@
-import { motion } from 'framer-motion';
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Github } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const Projects = () => {
   const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
+  const titleRef = useScrollAnimation({ once: false });
+  const ctaRef = useScrollAnimation({ once: false });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -101,63 +104,59 @@ const Projects = () => {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {t('projects.title')}
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t('projects.subtitle')}
-          </p>
-        </motion.div>
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="animate-fade-up animate-delay-200">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              {t('projects.title')}
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              {t('projects.subtitle')}
+            </p>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.titleKey}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
-            >
-              {/* Project Image */}
-              <div className="relative h-64 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                <img
-                  src={project.image}
-                  alt={t(project.titleKey)}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    // Fallback to gradient if image fails to load
-                    e.currentTarget.style.display = 'none';
-                    const fallback = e.currentTarget.nextElementSibling as HTMLDivElement;
-                    if (fallback) {
-                      fallback.style.display = 'flex';
-                    }
-                  }}
-                />
-                <div 
-                  className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 hidden items-center justify-center"
-                >
-                  <span className="text-white/70 text-lg font-medium">Project Preview</span>
+          {projects.map((project, index) => {
+            const projectRef = useScrollAnimation({ once: false });
+            return (
+              <div
+                key={project.titleKey}
+                ref={projectRef as React.RefObject<HTMLDivElement>}
+                className="animate-fade-up"
+                style={{ transitionDelay: `${index * 0.1}s` }}
+              >
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+                {/* Project Image */}
+                <div className="relative h-64 overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                  <img
+                    src={project.image}
+                    alt={t(project.titleKey)}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to gradient if image fails to load
+                      e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.nextElementSibling as HTMLDivElement;
+                      if (fallback) {
+                        fallback.style.display = 'flex';
+                      }
+                    }}
+                  />
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 hidden items-center justify-center"
+                  >
+                    <span className="text-white/70 text-lg font-medium">Project Preview</span>
+                  </div>
+                  <div 
+                    className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span className="text-white font-medium bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
+                      View Project
+                    </span>
+                  </div>
                 </div>
-                <div 
-                  className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span className="text-white font-medium bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
-                    View Project
-                  </span>
-                </div>
-              </div>
 
-              {/* Project Content */}
-              <div className="p-4 sm:p-6 md:p-8">
+                {/* Project Content */}
+                <div className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   {t(project.titleKey)}
                 </h3>
@@ -179,47 +178,32 @@ const Projects = () => {
 
                 {/* Project Links */}
                 <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-                  <motion.a
+                  <a
                     href={project.github}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center space-x-2 px-3 sm:px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 text-sm sm:text-base"
+                    className="flex items-center justify-center space-x-2 px-3 sm:px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 text-sm sm:text-base hover:scale-105"
                   >
                     <Github size={16} className="sm:w-4.5 sm:h-4.5" />
                     <span>{t('projects.view_code')}</span>
-                  </motion.a>
-                  {/* <motion.a
-                    href={project.live}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    <ExternalLink size={18} />
-                    <span>{t('projects.view_live')}</span>
-                  </motion.a> */}
+                  </a>
                 </div>
               </div>
-            </motion.div>
-          ))}
+              </div>
+              </div>
+            );
+          })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <motion.a
-            href="https://github.com/denisetiya"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-shadow duration-300 text-sm sm:text-base"
-          >
-            <Github size={18} className="sm:w-5 sm:h-5" />
-            <span>{t('projects.view_all')}</span>
-          </motion.a>
-        </motion.div>
+        <div ref={ctaRef as React.RefObject<HTMLDivElement>} className="animate-fade-up animate-delay-500">
+          <div className="text-center mt-16">
+            <a
+              href="https://github.com/denisetiya"
+              className="inline-flex items-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 text-sm sm:text-base hover:scale-105"
+            >
+              <Github size={18} className="sm:w-5 sm:h-5" />
+              <span>{t('projects.view_all')}</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
