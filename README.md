@@ -4,7 +4,7 @@
 
 Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a keen interest in web development, software architecture, and all things TypeScript.
 
-🌐 **[Visit my optimized portfolio website](https://denisetiya.vercel.app/)**
+🌐 **[Visit my portfolio website](https://denisetiya.vercel.app/)**
 
 ## ✨ Recent Optimizations
 
