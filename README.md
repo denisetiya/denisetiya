@@ -6,14 +6,6 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 
 🌐 **[Visit my portfolio website](https://denisetiya.vercel.app/)**
 
-## ✨ Recent Optimizations
-
-This portfolio has been fully optimized for:
-- **🚀 Performance**: Removed Framer Motion and replaced with React InScroll for better performance
-- **📱 SEO**: Comprehensive meta tags, Open Graph, Twitter cards, and structured data (JSON-LD)
-- **♿ Accessibility**: WCAG compliant with focus states, reduced motion support, and high contrast mode
-- **🔍 Search Engine Optimization**: Sitemap, robots.txt, and semantic HTML structure
-- **💨 Modern Tech Stack**: React 19, TypeScript, Vite, Tailwind CSS v4, and React Router v7
 
 ## 🚀 About Me
 
