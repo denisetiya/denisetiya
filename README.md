@@ -28,7 +28,7 @@ Welcome to my GitHub profile! I'm a passionate **Fullstack Developer** with a ke
 4. [**Medisense API - Intelligent Healthcare Solutions**](https://github.com/denisetiya/medisense-api.git) : A modern backend project offering features like **Symptom Analysis**, **Medication Recommendation**, **Disease Lookup**, and **Drug Interaction Checker** to transform healthcare services. 🚀
 5. [RestQuick (cli module)](https://github.com/denisetiya/restquick.git) : Cli for generete Rest Api (base on Rest Api Template with Jwt authentication) using npx or pnpx
 6. [Svelte In-Scroll (svelte library)](https://github.com/denisetiya/svelte-inscroll.git) : A lightweight and customizable library for creating smooth scroll animations in Svelte applications
-7. [Qera Backend Framework](https://github.com/denisetiya/Qera.git) : A high-performance REST API framework powered by uWebSockets.js with minimal dependencies.
+7. [Qwe Backend Framework](https://github.com/denisetiya/Qwe) : A high-performance REST API framework powered by uWebSockets.js with minimal dependencies.
 
 
 ## 📚 What I'm Learning
