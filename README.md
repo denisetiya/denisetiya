@@ -56,7 +56,7 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=denisetiya&theme=radical" alt="denisetiya's Streak" />
+    [![GitHub Streak](https://streak-stats.demolab.com/?user=denisetiya)](https://git.io/streak-stats)
 </div>
 
 <div align="center">
