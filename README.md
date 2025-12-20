@@ -56,7 +56,7 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=dark" height="180" alt="Top Languages" />
 </div>
 
-<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=denisetiya&theme=onedark-duo&hide_border=true" alt="GitHub Streak" /></a>
+<!-- <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=denisetiya&theme=onedark-duo&hide_border=true" alt="GitHub Streak" /></a> -->
 
 
 ---
