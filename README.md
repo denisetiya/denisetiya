@@ -1,4 +1,5 @@
-# 👋 Hello, I'm Denisetiya!
+# 👋 Hello, I'm Denisetiya! <img src="https://visitor-badge.laobi.icu/badge?page_id=denisetiya.denisetiya" alt="visitor badge"/>
+
 
 Welcome to my GitHub profile! I'm a passionate **Backend Engineer** who occasionally works as a **Fullstack Developer**. I love learning new things and currently feel most at home building robust backend systems.
 
@@ -50,15 +51,9 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 
 ## 📊 GitHub Stats
 
-<div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=denisetiya&show_icons=true&theme=tokyonight" height="180" alt="Denisetiya's Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=tokyonight" height="180" alt="Top Languages" />
-</div>
 
-
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=denisetiya.denisetiya" alt="visitor badge"/>
-</div>
 
 ---
 
