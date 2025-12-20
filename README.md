@@ -56,7 +56,7 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=denisetiya&theme=radical" alt="denisetiya's Streak" />
+  <img src="https://streak-stats.demolab.com?user=denisetiya&theme=radical" alt="denisetiya's Streak" />
 </div>
 
 <div align="center">
