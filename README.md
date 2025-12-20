@@ -50,14 +50,26 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 
 ## 📊 GitHub Stats
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=denisetiya&show_icons=true&theme=tokyonight" height="180" alt="Denisetiya's Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=tokyonight" height="180" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=denisetiya.denisetiya" alt="visitor badge"/>
-</div>
+<table align="center" style="border: none;">
+  <tr>
+    <td align="center" style="border: none;">
+      <img src="https://github-readme-stats.vercel.app/api?username=denisetiya&show_icons=true&theme=tokyonight" height="180" alt="Denisetiya's Stats" />
+    </td>
+    <td align="center" style="border: none;">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=tokyonight" height="180" alt="Top Languages" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" style="border: none;">
+      <img src="https://streak-stats.demolab.com?user=denisetiya&theme=tokyonight" alt="denisetiya's Streak" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" style="border: none;">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=denisetiya.denisetiya" alt="visitor badge"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
