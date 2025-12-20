@@ -16,7 +16,7 @@ I'm also a **Library Maker** for the community and have a strong background in *
 
 ## 🔧 Technologies & Tools I Work With
 
-- **Languages**: TypeScript,JavaScript, Python, C++, Go, Rust, 
+- **Languages**: TypeScript, JavaScript, Python, C++, Go, Rust
 - **Frameworks**: Express, NestJS, Hono, Django, React, Svelte
 - **Databases**: PostgreSQL, MongoDB, MySQL, Firebase
 - **DevOps & Infrastructure**: Nginx, Traefik, Kong, Docker, Linux
@@ -51,8 +51,8 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=denisetiya&show_icons=true&theme=radical" alt="Denisetiya's Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=radical" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=denisetiya&show_icons=true&theme=radical" height="180" alt="Denisetiya's Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=radical" height="180" alt="Top Languages" />
 </div>
 
 <div align="center">
