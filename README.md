@@ -51,12 +51,9 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 
 ## 📊 GitHub Stats
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=denisetiya&show_icons=true&theme=merko" height="180" alt="Denisetiya's Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=denisetiya&layout=compact&theme=merko" height="180" alt="Top Languages" />
-</div>
-
-<!-- <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=denisetiya&theme=onedark-duo&hide_border=true" alt="GitHub Streak" /></a> -->
+![GitHub Stats](https://denisetiya-github-stats.vercel.app/api/stats?username=denisetiya&theme=github)
+![Top Languages](https://denisetiya-github-stats.vercel.app/api/languages?username=denisetiya&theme=github)
+![Performance](https://denisetiya-github-stats.vercel.app/api/performance?username=denisetiya&theme=github)
 
 
 ---
