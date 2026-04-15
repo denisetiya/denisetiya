@@ -51,7 +51,7 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 
 ## 📊 GitHub Stats
 
-![GitHub Overview](https://denisetiya-github-stats.vercel.app/api/all?username=denisetiya&theme=dark&v=20260416))
+![GitHub Overview](https://denisetiya-github-stats.vercel.app/api/all?username=denisetiya&theme=dark&v=20260416)
 
 
 ---
