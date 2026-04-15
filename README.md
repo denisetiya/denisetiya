@@ -51,9 +51,9 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 
 ## 📊 GitHub Stats
 
-![GitHub Stats](https://denisetiya-github-stats.vercel.app/api/stats?username=denisetiya&theme=github)
-![Top Languages](https://denisetiya-github-stats.vercel.app/api/languages?username=denisetiya&theme=github)
-![Performance](https://denisetiya-github-stats.vercel.app/api/performance?username=denisetiya&theme=github)
+![GitHub Stats](https://denisetiya-github-stats.vercel.app/api/stats?username=denisetiya&theme=dark)
+![Top Languages](https://denisetiya-github-stats.vercel.app/api/languages?username=denisetiya&theme=dark)
+![Performance](https://denisetiya-github-stats.vercel.app/api/performance?username=denisetiya&theme=dark)
 
 
 ---
