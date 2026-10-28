@@ -1,61 +1,33 @@
-# 👋 Hello, I'm Denisetiya! <img src="https://visitor-badge.laobi.icu/badge?page_id=denisetiya.denisetiya" alt="visitor badge"/>
+### Deni Setiya
 
+Backend engineer in Bandar Lampung, Indonesia. I build TypeScript APIs and the libraries around them.
 
-Welcome to my GitHub profile! I'm a passionate **Backend Engineer** who occasionally works as a **Fullstack Developer**. I love learning new things and currently feel most at home building robust backend systems.
+Currently at [PT HES Cipta Kreasi](https://www.linkedin.com/company/hes-cipta-kreasi), working in TypeScript and MongoDB. Open to backend roles, remote or onsite.
 
-I'm also a **Library Maker** for the community and have a strong background in **DevOps**, with **Linux** as my daily driver.
+**On npm**
 
-🌐 **[Visit my portfolio website](https://denisetiya.site/)**
+| Package | What it does |
+| --- | --- |
+| [`qwe-js`](https://www.npmjs.com/package/qwe-js) | Zero-dependency REST framework on uWebSockets.js, an Express alternative (alpha) |
+| [`@denisetiya/valdix`](https://www.npmjs.com/package/@denisetiya/valdix) | Schema validation with 17 locales, about 1KB gzipped |
+| [`animate-on-view`](https://www.npmjs.com/package/animate-on-view) | Scroll animations for React, Svelte, Vue, Solid, Preact, Astro |
+| [`svelte-inscroll`](https://www.npmjs.com/package/svelte-inscroll) | Scroll animations for Svelte |
+| [`apiscriptor`](https://www.npmjs.com/package/apiscriptor) | API documentation for Express with generated types |
+| [`astro-ink`](https://www.npmjs.com/package/astro-ink) | Token-driven UI components for Astro |
+| [`sync-later`](https://www.npmjs.com/package/sync-later) | Offline-first mutation engine for REST APIs |
 
-## 🚀 About Me
+**Also worth a look**
 
-- 🐧 **Linux Enthusiast**: My OS of choice is Linux, and I'm comfortable navigating and managing server environments.
-- 🛠️ **Backend & DevOps**: I specialize in building scalable APIs and managing infrastructure. I'm experienced with API Gateways like **Nginx**, **Traefik**, and **Kong**.
-- 📦 **Library Creator**: I enjoy building and sharing libraries for the developer community (even if they aren't famous yet!).
-- 🌱 I'm always expanding my knowledge, exploring the latest technologies, and finding ways to improve my craft.
-- 💻 **TypeScript Mastery**: I have deeply mastered TypeScript, utilizing its advanced features to build highly scalable and type-safe applications. It's my core strength.
+- [security-tester](https://github.com/denisetiya/security-tester): CLI security audits for APIs and domains, with SARIF and JUnit output for CI
+- [nginx-gateway](https://github.com/denisetiya/nginx-gateway): Nginx API gateway with Let's Encrypt SSL and per-IP rate limiting
+- [single-store-api](https://github.com/denisetiya/single-store-api): e-commerce API with Express, Prisma, MongoDB, and Zod
 
-## 🔧 Technologies & Tools I Work With
+**Stack**
 
-- **Languages**: TypeScript, JavaScript, Python, C++, Go, Rust
-- **Frameworks**: Express, NestJS, Hono, Django, React, Svelte
-- **Databases**: PostgreSQL, MongoDB, MySQL, Firebase
-- **DevOps & Infrastructure**: Nginx, Traefik, Kong, Docker, Linux
-- **Tools & Platforms**: Node.js, Bun, Git, VS Code, Postman, ApiDog
+TypeScript, Node.js, Bun, Express, NestJS, Hono, PostgreSQL, MongoDB, Redis, Docker, Nginx, Linux. Go and Rust when the job calls for it.
 
-## 🌟 Featured Projects
+**Links**
 
-1. [**Golang RestFull Api Example**](https://github.com/denisetiya/golang-restfull.git): A comprehensive RESTful API built with Go using best practices including validation, MongoDB, JWT authentication, and clean architecture.
-2. [**Markdown-Editor**](https://github.com/denisetiya/markdown-editor.git): A powerful, modern, and feature-rich Markdown editor built with React, TypeScript, and Tailwind CSS. Experience seamless writing with real-time preview, syntax highlighting, and advanced formatting tools.
-3. [**Single Store - E-Commerce API**](https://github.com/denisetiya/single-store-api.git): A robust backend for an E-commerce platform, developed with Express, TypeScript, MongoDB, Prisma, Zod, and more.
-4. [**Medisense API - Intelligent Healthcare Solutions**](https://github.com/denisetiya/medisense-api.git) : A modern backend project offering features like **Symptom Analysis**, **Medication Recommendation**, **Disease Lookup**, and **Drug Interaction Checker** to transform healthcare services. 🚀
-5. [**Valdix (Library)**](https://github.com/denisetiya/valdix.git) : TypeScript validation library with built-in multilingual support for Indonesian, Japanese, and English. Features a Zod-like API optimized for high performance.
-6. [**Animate On View (library)**](https://github.com/denisetiya/animate-on-view.git) : A lightweight and customizable library for creating smooth scroll animations in React & SSR framework applications
-7. [**Qwe Backend Framework**](https://github.com/denisetiya/Qwe) : A high-performance REST API framework powered by uWebSockets.js with minimal dependencies.
+[denisetiya.site](https://denisetiya.site) · [LinkedIn](https://linkedin.com/in/deni-setiya-920a092a5) · [Email](mailto:denisetiyaa@gmail.com)
 
-## 📚 What I'm Learning
-
-I'm currently focused on deepening my expertise in:
-
-- Advanced **TypeScript** patterns and design principles
-- Optimizing **Node.js or Bun.js** performance for large-scale applications
-- Building modern, accessible **React** and **Svelte** applications
-- Deepening knowledge in **Go** and **Rust** for systems programming
-
-## 🤝 Let's Connect!
-
-I'm always eager to connect with fellow developers, collaborate on exciting projects, and share knowledge. Feel free to reach out!
-
-- 💼 [LinkedIn](https://linkedin.com/in/deni-setiya-920a092a5)
-- 📧 [Email Me](mailto:denisetiya@gmail.com)
-
-## 📊 GitHub Stats
-
-![GitHub Overview](https://denisetiya-github-stats.vercel.app/api/all?username=denisetiya&theme=tokyonight)
-
-
----
-
-Thanks for stopping by! I hope you find something inspiring here. Keep building amazing things! 🚀
-
----
+![GitHub stats](https://denisetiya-github-stats.vercel.app/api/all?username=denisetiya&theme=tokyonight)
