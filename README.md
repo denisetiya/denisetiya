@@ -55,6 +55,6 @@ I'm always eager to connect with fellow developers, collaborate on exciting proj
 
 ---
 
-Thanks for stopping by! I hope you find something inspiring here. Keep building amazing things! 🚀
+Thanks for stopping by! I hope you find something inspiring here. Keep building amazing things! 
 
 ---
